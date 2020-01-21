@@ -38,6 +38,7 @@ function initMap(){
         lng: p.coords.longitude
       };
       user.setPosition(position);
+      showBorders();
       getAttractions(location);
     }, function() {
       handleLocationError('Geolocation service failed', map.center());
