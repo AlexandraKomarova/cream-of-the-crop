@@ -1,4 +1,11 @@
+
 var map, user, infoWindow;
+
+// append the key script
+
+$("body").append(`<script src="https://maps.googleapis.com/maps/api/js?key= + ${key} + &callback=initMap&libraries=places"
+async defer></script>`)
+
 
 function initMap(){
   var options = {
