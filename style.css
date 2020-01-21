@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+html, body {
+  height: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+  width: 70%;
+  margin: 5% auto;
+=======
 #map {
   height: 600px;
   width: 100%;
+>>>>>>> 379ae5bd410fbdc7dd88b629fe0069f143dbc440
 }
