@@ -1,4 +1,4 @@
-$("body").append('<script async defer src="https://maps.googleapis.com/maps/api/js?key='+key+'&libraries=places&callback=initMap"></script>');
+// $("body").append('<script async defer src="https://maps.googleapis.com/maps/api/js?key='+key+'&libraries=places&callback=initMap"></script>');
 
 var map, user, errorWindow;
 var infoWindow;
