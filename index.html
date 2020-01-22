@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cream of the Crop</title>
   <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
 
-  <header>
+<body> 
+  
+  <!-- <header>
     <div id="logo">Logo goes here</div>
-  </header>
+  </header> -->
 
 <div class="container" id="wrapper">
   
+<!-- <div id="map"></div> -->
+  <!-- Add div elements here! -->
+  <div id="map"></div>
+
+
 <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn pink darken-1 modal-trigger" href="#demo-modal">Launch Modal</a>
+  <a id="trigger" class="waves-effect waves-light btn pink darken-1 modal-trigger" href="#demo-modal">Launch Modal</a>
 
   <!-- Modal Structure -->
   <div id="demo-modal" class="modal">
     <div class="modal-content">
       <h4>A Demo of Simple Modal</h4>
-      <p id="modalCity">Content of the modal goes here. Place neighborhood INFO HERE!.</p>
+      <p id="modalCity">Content of the modal goes here. Place neighborhood INFO HERE!. 
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi nobis nam. Doloremque cum temporibus, nostrum eos odio adipisci! Nihil, consequuntur natus officiis nisi laboriosam mollitia optio commodi dicta ipsum.</p>
+     
     </div>
-    <div class="modal-footer">
+    <div id=fixed-footer class="modal bottom-sheet">
       <a href="#!" class="modal-action modal-close waves-effect waves-red btn red lighten-1">Close</a>
     </div>
   </div>
@@ -39,12 +51,11 @@ $(document).ready(function(){
   });
 </script>
 
-  <!-- Add div elements here! -->
-  <div id="map"></div>
   <!-- Script Links -->
   <script src="key.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="borders.js"></script>
   <script src="script.js"></script>
-</body>
+</body>   
 </html>
+
