@@ -580,13 +580,53 @@ var LESCoords = [
 
 var addListenersOnPolygon = function(polygon) {
     google.maps.event.addListener(polygon, 'click', function (event) {
-      console.log("clicked")
+       console.log("clicked")
+            var request = {
+                location: {lat:40.715033,lng:-73.984272},
+                radius: "3000",
+                type: ["restaurant"]
+            };
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+        
+
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK){
+                console.log(results)
+                var topSorted = results.slice(0, 4) 
+                for (var i = 0; i < topSorted.length; i++) {
+                    var place = topSorted[i];
+          
+                    let content = `<h3>${place.name}</h3>
+                    <h4>${place.vicinity}</h4>
+          
+                    Rating: ${place.rating}
+                    </p>`;
+                    var marker = new google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map,
+                        title: place.name
+                    });
+                    var infowindow = new google.maps.InfoWindow({
+                        content: content
+                    });
+                    bindInfoWindow(marker, map, infowindow, content);
+                    marker.setMap(map);
+                }
+            }
+          }
+          function bindInfoWindow (marker, map, infowindow, html) {
+            marker.addListener("click", function() {
+                infowindow.setContent(html);
+                infowindow.open(map, this);
+            });
+          }
     });  
 }
     var LESBorderOutline = new google.maps.Polygon({
     paths: LESCoords,
-    strokeColor: 'black',
-    strokeWeight: 2,
+    strokeColor: 'grey',
+    strokeWeight: 1,
     fillColor: 'transparent',
     });
     LESBorderOutline.setMap(map);
