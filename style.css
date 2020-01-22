@@ -13,19 +13,21 @@
 
 .modal {
 position: absolute;
-top: 0 important;
-height: 80vh;
+top: 0 !important;
+height: 100vh;
+max-height: 98vh;
 background-color: #fafafa;
 padding: 0;
 width: 30%;
 will-change: top, opacity;
-margin: 0;
-/* max-height: 600px; */
+margin: 1vh !important;
+
 }
 
 
 #wrapper {
 width: 100%;
+max-width: 100%;
 }
 /* .container {
   width: 100%;
