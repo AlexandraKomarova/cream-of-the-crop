@@ -13,7 +13,7 @@ var markers = [];
 
 function initMap(){
   var options = {
-    zoom:12,
+    zoom:11.9,
     center:{lat:40.7831,lng:-73.9712}
   };
   var location = new Object();
@@ -38,8 +38,10 @@ function initMap(){
         lng: p.coords.longitude
       };
       user.setPosition(position);
-      showBorders();
-      getAttractions(location);
+      google.maps.event.addListener(map,"click", getAttractions)
+
+      // showBorders();
+      // getAttractions(location);
     }, function() {
       handleLocationError('Geolocation service failed', map.center());
     });
@@ -56,6 +58,10 @@ function handleLocationError (content, position){
 }
 // Request tourist attractions and place markers
 function getAttractions (location) {
+  
+  console.log("lat", location.latLng.lat())
+  console.log("lng", location.latLng.lng())
+
   var pyrmont = new google.maps.LatLng(location.lat, location.long);
   var request = {
       location: pyrmont,
