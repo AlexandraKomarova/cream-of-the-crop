@@ -24,6 +24,17 @@ margin: 1vh !important;
 
 }
 
+@media only screen and (max-width: 960px) {
+  .modal {
+    background-color: white;
+    margin: 1% !important;
+    top: 75vh !important;
+    height: 23vh;
+    max-height: 98vh;
+    width: 98%;
+        
+  }
+}
 
 #wrapper {
 width: 100%;
