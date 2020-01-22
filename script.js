@@ -13,8 +13,8 @@ var markers = [];
 
 function initMap(){
   var options = {
-    zoom:11.9,
-    center:{lat:40.7831,lng:-73.9712}
+    zoom:14,
+    center:{lat:40.7150,lng:-73.9999}
   };
   var location = new Object();
   // New map
@@ -40,8 +40,8 @@ function initMap(){
       user.setPosition(position);
       google.maps.event.addListener(map,"click", getAttractions)
 
-      // showBorders();
-      // getAttractions(location);
+      showBorders();
+      getAttractions(location);
     }, function() {
       handleLocationError('Geolocation service failed', map.center());
     });
