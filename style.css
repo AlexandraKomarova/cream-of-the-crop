@@ -21,6 +21,10 @@ padding: 0;
 width: 30%;
 will-change: top, opacity;
 margin: 1vh !important;
+border-top-left-radius: 25px;
+border-top-Right-radius: 25px;
+border-bottom-left-radius: 25px;
+border-bottom-Right-radius: 25px;
 
 }
 
