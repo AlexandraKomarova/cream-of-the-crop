@@ -1,4 +1,49 @@
 function showBorders(){   
+    var addListenersOnPolygon = function(polygon) {
+        google.maps.event.addListener(polygon, 'click', function (event) {
+        console.log("clicked")
+                var request = {
+                    location: {lat:40.715033,lng:-73.984272},
+                    radius: "3000",
+                    type: ["restaurant"]
+                };
+                service = new google.maps.places.PlacesService(map);
+                service.nearbySearch(request, callback);
+            
+            function callback(results, status) {
+                if (status == google.maps.places.PlacesServiceStatus.OK){
+                    console.log(results)
+                    var topSorted = results.slice(0, 4) 
+                    for (var i = 0; i < topSorted.length; i++) {
+                        var place = topSorted[i];
+            
+                        let content = `<h3>${place.name}</h3>
+                        <h4>${place.vicinity}</h4>
+            
+                        Rating: ${place.rating}
+                        </p>`;
+                        var marker = new google.maps.Marker({
+                            position: place.geometry.location,
+                            map: map,
+                            title: place.name
+                        });
+                        var infowindow = new google.maps.InfoWindow({
+                            content: content
+                        });
+                        bindInfoWindow(marker, map, infowindow, content);
+                        marker.setMap(map);
+                    }
+                }
+            }
+            function bindInfoWindow (marker, map, infowindow, html) {
+                marker.addListener("click", function() {
+                    infowindow.setContent(html);
+                    infowindow.open(map, this);
+                });
+            }
+        });  
+    }
+
     var LESCoords = [ 
         { 
             lat:40.7150577,
@@ -124,54 +169,7 @@ function showBorders(){
             lat:40.7146389,
             lng:-73.9927107
         }
-
     ]
-
-var addListenersOnPolygon = function(polygon) {
-    google.maps.event.addListener(polygon, 'click', function (event) {
-       console.log("clicked")
-            var request = {
-                location: {lat:40.715033,lng:-73.984272},
-                radius: "3000",
-                type: ["restaurant"]
-            };
-            service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(request, callback);
-        
-
-        function callback(results, status) {
-            if (status == google.maps.places.PlacesServiceStatus.OK){
-                console.log(results)
-                var topSorted = results.slice(0, 4) 
-                for (var i = 0; i < topSorted.length; i++) {
-                    var place = topSorted[i];
-          
-                    let content = `<h3>${place.name}</h3>
-                    <h4>${place.vicinity}</h4>
-          
-                    Rating: ${place.rating}
-                    </p>`;
-                    var marker = new google.maps.Marker({
-                        position: place.geometry.location,
-                        map: map,
-                        title: place.name
-                    });
-                    var infowindow = new google.maps.InfoWindow({
-                        content: content
-                    });
-                    bindInfoWindow(marker, map, infowindow, content);
-                    marker.setMap(map);
-                }
-            }
-          }
-          function bindInfoWindow (marker, map, infowindow, html) {
-            marker.addListener("click", function() {
-                infowindow.setContent(html);
-                infowindow.open(map, this);
-            });
-          }
-    });  
-}
     var LESBorderOutline = new google.maps.Polygon({
     paths: LESCoords,
     strokeColor: 'black',
@@ -441,7 +439,60 @@ var addListenersOnPolygon = function(polygon) {
         });
         chinatownBorderOutline.setMap(map);   
     
-       
+    var sohoCoords = [ 
+           { 
+              lat:40.7235836,
+              lng:-74.0048933
+           },
+           { 
+              lat:40.7258277,
+              lng:-74.0038633
+           },
+           { 
+              lat:40.7283319,
+              lng:-74.0027904
+           },
+           { 
+              lat:40.7256976,
+              lng:-73.9975119
+           },
+           { 
+              lat:40.7251122,
+              lng:-73.9951944
+           },
+           { 
+              lat:40.7234372,
+              lng:-73.9966536
+           },
+           { 
+              lat:40.7222988,
+              lng:-73.9971149
+           },
+           { 
+              lat:40.7214614,
+              lng:-73.9973617
+           },
+           { 
+              lat:40.7208108,
+              lng:-73.9976406
+           },
+           { 
+              lat:40.717973,
+              lng:-73.9999366
+           },
+           { 
+              lat:40.7218435,
+              lng:-74.0053116
+           }
+        ]
+        var sohoBorderOutline = new google.maps.Polygon({
+            paths: sohoCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        sohoBorderOutline.setMap(map);   
+    
      
     
 }
