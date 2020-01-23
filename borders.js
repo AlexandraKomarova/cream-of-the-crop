@@ -21,10 +21,22 @@ function showBorders(){
             $("#neighborhood").text(nolitaName);
             $("#cityImg").attr("src", nolitaImage);
             $("#modalCity").text(noLita);
-        } else if(polygon===nolitaBorderOutline){
-            $("#neighborhood").text(nolitaName);
-            $("#cityImg").attr("src", nolitaImage);
-            $("#modalCity").text(noLita);
+        } else if(polygon===littleItalyBorderOutline){
+            $("#neighborhood").text(littleitalyName);
+            $("#cityImg").attr("src", littleitalyImage);
+            $("#modalCity").text(littleItaly);
+        } else if(polygon===boweryBorderOutline){
+            $("#neighborhood").text(boweryName);
+            $("#cityImg").attr("src", boweryImage);
+            $("#modalCity").text(bowery);
+        } else if(polygon===tribecaBorderOutline){
+            $("#neighborhood").text(tribecaName);
+            $("#cityImg").attr("src", tribecaImage);
+            $("#modalCity").text(triBeCa);
+        } else if(polygon===civicCenterBorderOutline){
+            $("#neighborhood").text(civiccenterName);
+            $("#cityImg").attr("src", civiccenterImage);
+            $("#modalCity").text(civicCenter);
         }
                 //parameters for the markers
                 var request = {
