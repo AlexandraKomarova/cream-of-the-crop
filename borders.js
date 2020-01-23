@@ -301,7 +301,8 @@ function showBorders(){
         strokeWeight: 2,
         fillColor: 'transparent',
         });
-        alphabetCityBorderOutline.setMap(map);   
+        alphabetCityBorderOutline.setMap(map);  
+        addListenersOnPolygon(alphabetCityBorderOutline); 
 
     var chinatownCoords = [ 
            { 
@@ -439,7 +440,8 @@ function showBorders(){
             strokeWeight: 2,
             fillColor: 'transparent',
         });
-        chinatownBorderOutline.setMap(map);   
+        chinatownBorderOutline.setMap(map);  
+        addListenersOnPolygon(chinatownBorderOutline);  
     
     var sohoCoords = [ 
            { 
@@ -494,6 +496,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         sohoBorderOutline.setMap(map);   
+        addListenersOnPolygon(sohoBorderOutline); 
     
     var nolitaCoords = [ 
            { 
@@ -568,6 +571,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         nolitaBorderOutline.setMap(map);   
+        addListenersOnPolygon(nolitaBorderOutline); 
 
     var littleItalyCoords = [ 
            { 
@@ -618,6 +622,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         littleItalyBorderOutline.setMap(map);  
+        addListenersOnPolygon(littleItalyBorderOutline); 
 
     var boweryCoords = [ 
            { 
@@ -688,6 +693,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         boweryBorderOutline.setMap(map);  
+        addListenersOnPolygon(boweryBorderOutline); 
 
     var tribecaCoords = [ 
            { 
@@ -746,6 +752,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         tribecaBorderOutline.setMap(map);  
+        addListenersOnPolygon(tribecaBorderOutline); 
     
     var civicCenterCoords = [ 
            { 
@@ -1308,6 +1315,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         civicCenterBorderOutline.setMap(map);  
+        addListenersOnPolygon(civicCenterBorderOutline); 
 
     var twoBridgesCoords = [ 
            { 
@@ -1346,6 +1354,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         twoBridgesBorderOutline.setMap(map);  
+        addListenersOnPolygon(twoBridgesBorderOutline); 
 
     var batteryParkCoords = [ 
            { 
@@ -1508,6 +1517,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         batteryParkBorderOutline.setMap(map);  
+        addListenersOnPolygon(batteryParkBorderOutline); 
 
     var financialDistrictCoords = [ 
            { 
@@ -2410,6 +2420,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         financialDistrictBorderOutline.setMap(map);  
+        addListenersOnPolygon(financialDistrictBorderOutline); 
 
     var hudsonSquareCoords = [ 
            { 
@@ -2456,6 +2467,7 @@ function showBorders(){
             fillColor: 'transparent',
         });
         hudsonSquareBorderOutline.setMap(map); 
+        addListenersOnPolygon(hudsonSquareBorderOutline); 
 }
 
 
