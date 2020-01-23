@@ -2410,6 +2410,52 @@ function showBorders(){
             fillColor: 'transparent',
         });
         financialDistrictBorderOutline.setMap(map);  
+
+    var hudsonSquareCoords = [ 
+           { 
+              "lat":40.7268034,
+              "lng":-74.0151072
+           },
+           { 
+              "lat":40.7265107,
+              "lng":-74.011631
+           },
+           { 
+              "lat":40.7291125,
+              "lng":-74.0112019
+           },
+           { 
+              "lat":40.7283157,
+              "lng":-74.0028334
+           },
+           { 
+              "lat":40.7269009,
+              "lng":-74.0034127
+           },
+           { 
+              "lat":40.7221526,
+              "lng":-74.0053761
+           },
+           { 
+              "lat":40.7218192,
+              "lng":-74.005301
+           },
+           { 
+              "lat":40.7258277,
+              "lng":-74.0117383
+           },
+           { 
+              "lat":40.7263481,
+              "lng":-74.0152788
+           }
+        ];
+        var hudsonSquareBorderOutline = new google.maps.Polygon({
+            paths: hudsonSquareCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        hudsonSquareBorderOutline.setMap(map); 
 }
 
 
