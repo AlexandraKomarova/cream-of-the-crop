@@ -1,9 +1,32 @@
-function showBorders(){   
+function showBorders(){  
     var addListenersOnPolygon = function(polygon) {
         google.maps.event.addListener(polygon, 'click', function (event) {
         console.log("clicked")
-        // console.log("lat", location.latLng.lat())
-        console.log(event)
+        //on-click event for modal
+        if(polygon===LESBorderOutline){
+            console.log("polygon");
+            // $('.modal').model('open');
+            $("#neighborhood").text(lowereastsideName);
+            $("#cityImg").attr("src", littleitalyImage);
+            $("#modalCity").text(lowerEastSide);
+        } else if(polygon===chinatownBorderOutline){
+            $("#neighborhood").text(chinatownName);
+            $("#cityImg").attr("src", chinatownImage);
+            $("#modalCity").text(chinatown);
+        } else if(polygon===sohoBorderOutline){
+            $("#neighborhood").text(sohoName);
+            $("#cityImg").attr("src", sohoImage);
+            $("#modalCity").text(soHo);
+        } else if(polygon===nolitaBorderOutline){
+            $("#neighborhood").text(nolitaName);
+            $("#cityImg").attr("src", nolitaImage);
+            $("#modalCity").text(noLita);
+        } else if(polygon===nolitaBorderOutline){
+            $("#neighborhood").text(nolitaName);
+            $("#cityImg").attr("src", nolitaImage);
+            $("#modalCity").text(noLita);
+        }
+                //parameters for the markers
                 var request = {
                     location: event.latLng,
                     radius: "700",
@@ -18,6 +41,7 @@ function showBorders(){
                     var topSorted = results.slice(0, 4) 
                     for (var i = 0; i < topSorted.length; i++) {
                         var place = topSorted[i];
+                        // clearMarker++;
 
                         let content = `<h3>${place.name}</h3>
                         <h4>${place.vicinity}</h4>
@@ -46,7 +70,7 @@ function showBorders(){
             }
         });  
     }
-
+    //coordinates, outlines, and listeners for each region
     var LESCoords = [ 
         { 
             lat:40.7150577,
