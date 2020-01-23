@@ -27,6 +27,7 @@ function showBorders(){
                         var marker = new google.maps.Marker({
                             position: place.geometry.location,
                             map: map,
+                            animation: google.maps.Animation.DROP,
                             title: place.name
                         });
                         var infowindow = new google.maps.InfoWindow({
