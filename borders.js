@@ -5,11 +5,13 @@ function showBorders(){
         //on-click event for modal
         if(polygon===LESBorderOutline){
             console.log("polygon");
-            // $('.modal').model('open');
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(lowereastsideName);
             $("#cityImg").attr("src", littleitalyImage);
             $("#modalCity").text(lowerEastSide);
         } else if(polygon===chinatownBorderOutline){
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(chinatownName);
             $("#cityImg").attr("src", chinatownImage);
             $("#modalCity").text(chinatown);
