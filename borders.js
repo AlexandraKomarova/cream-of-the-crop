@@ -5,51 +5,75 @@ function showBorders(){
         //on-click event for modal
         if(polygon===LESBorderOutline){
             console.log("polygon");
-            // $('.modal').model('open');
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(lowereastsideName);
             $("#cityImg").attr("src", littleitalyImage);
             $("#modalCity").text(lowerEastSide);
         } else if(polygon===chinatownBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(chinatownName);
             $("#cityImg").attr("src", chinatownImage);
             $("#modalCity").text(chinatown);
         } else if(polygon===sohoBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(sohoName);
             $("#cityImg").attr("src", sohoImage);
             $("#modalCity").text(soHo);
         } else if(polygon===nolitaBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(nolitaName);
             $("#cityImg").attr("src", nolitaImage);
             $("#modalCity").text(noLita);
         } else if(polygon===littleItalyBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(littleitalyName);
             $("#cityImg").attr("src", littleitalyImage);
             $("#modalCity").text(littleItaly);
         } else if(polygon===boweryBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(boweryName);
             $("#cityImg").attr("src", boweryImage);
             $("#modalCity").text(bowery);
         } else if(polygon===tribecaBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(tribecaName);
             $("#cityImg").attr("src", tribecaImage);
             $("#modalCity").text(triBeCa);
         } else if(polygon===civicCenterBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(civiccenterName);
             $("#cityImg").attr("src", civiccenterImage);
             $("#modalCity").text(civicCenter);
         } else if(polygon===twoBridgesBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(twobridgesName);
             $("#cityImg").attr("src", twobridgesImage);
             $("#modalCity").text(twoBridges);
         } else if(polygon===batteryParkBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(batterypartcityName);
             $("#cityImg").attr("src", batterypartcityImage);
             $("#modalCity").text(batteryParkCity);
         } else if(polygon===financialDistrictBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(financialdistrictimageName);
             $("#cityImg").attr("src", financialdistrictImage);
             $("#modalCity").text(financialDistrict);
         } else if(polygon===hudsonSquareBorderOutline){
+            $('h3').css({"display": "none"})
+            $('.modal').css({"display": "block"})
             $("#neighborhood").text(hudsonName);
             $("#cityImg").attr("src", hudsonImage);
             $("#modalCity").text(hudsonSquare);

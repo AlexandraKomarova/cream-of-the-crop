@@ -13,8 +13,8 @@ var markers = [];
 
 function initMap(){
   var options = {
-    zoom:14.3,
-    center:{lat:40.716,lng:-73.999},
+    zoom:14,
+    center:{lat:40.7191,lng:-73.9973},
     styles: [
       {
         "elementType": "geometry",
