@@ -37,6 +37,22 @@ function showBorders(){
             $("#neighborhood").text(civiccenterName);
             $("#cityImg").attr("src", civiccenterImage);
             $("#modalCity").text(civicCenter);
+        } else if(polygon===twoBridgesBorderOutline){
+            $("#neighborhood").text(twobridgesName);
+            $("#cityImg").attr("src", twobridgesImage);
+            $("#modalCity").text(twoBridges);
+        } else if(polygon===batteryParkBorderOutline){
+            $("#neighborhood").text(batterypartcityName);
+            $("#cityImg").attr("src", batterypartcityImage);
+            $("#modalCity").text(batteryParkCity);
+        } else if(polygon===financialDistrictBorderOutline){
+            $("#neighborhood").text(financialdistrictimageName);
+            $("#cityImg").attr("src", financialdistrictImage);
+            $("#modalCity").text(financialDistrict);
+        } else if(polygon===hudsonSquareBorderOutline){
+            $("#neighborhood").text(hudsonName);
+            $("#cityImg").attr("src", hudsonImage);
+            $("#modalCity").text(hudsonSquare);
         }
                 //parameters for the markers
                 var request = {
