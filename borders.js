@@ -686,6 +686,64 @@ function showBorders(){
             fillColor: 'transparent',
         });
         boweryBorderOutline.setMap(map);  
+
+    var tribecaCoords = [ 
+           { 
+              "lat":40.7145251,
+              "lng":-74.0137714
+           },
+           { 
+              "lat":40.7153993,
+              "lng":-74.0135354
+           },
+           { 
+              "lat":40.7181763,
+              "lng":-74.0128326
+           },
+           { 
+              "lat":40.7182292,
+              "lng":-74.0132779
+           },
+           { 
+              "lat":40.7191602,
+              "lng":-74.0130526
+           },
+           { 
+              "lat":40.7214858,
+              "lng":-74.0125912
+           },
+           { 
+              "lat":40.7237747,
+              "lng":-74.0121138
+           },
+           { 
+              "lat":40.7256692,
+              "lng":-74.0117222
+           },
+           { 
+              "lat":40.7261652,
+              "lng":-74.011631
+           },
+           { 
+              "lat":40.725763,
+              "lng":-74.011052
+           },
+           { 
+              "lat":40.719355,
+              "lng":-74.001932
+           },
+           { 
+              "lat":40.711923,
+              "lng":-74.008112
+           }
+        ];
+        var tribecaBorderOutline = new google.maps.Polygon({
+            paths: tribecaCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        tribecaBorderOutline.setMap(map);  
 }
 
 
