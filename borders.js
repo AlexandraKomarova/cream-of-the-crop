@@ -6,7 +6,7 @@ function showBorders(){
         console.log(event)
                 var request = {
                     location: event.latLng,
-                    radius: "3000",
+                    radius: "700",
                     type: ["tourist_attraction"]
                 };
                 service = new google.maps.places.PlacesService(map);
