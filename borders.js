@@ -616,6 +616,76 @@ function showBorders(){
             fillColor: 'transparent',
         });
         littleItalyBorderOutline.setMap(map);  
+
+    var boweryCoords = [ 
+           { 
+              "lat":40.7173713,
+              "lng":-73.9915896
+           },
+           { 
+              "lat":40.7176638,
+              "lng":-73.9922548
+           },
+           { 
+              "lat":40.717924,
+              "lng":-73.993156
+           },
+           { 
+              "lat":40.7180866,
+              "lng":-73.9938426
+           },
+           { 
+              "lat":40.7183714,
+              "lng":-73.9948189
+           },
+           { 
+              "lat":40.7200465,
+              "lng":-73.9940679
+           },
+           { 
+              "lat":40.7215589,
+              "lng":-73.9934457
+           },
+           { 
+              "lat":40.72399,
+              "lng":-73.9925552
+           },
+           { 
+              "lat":40.72386,
+              "lng":-73.9919544
+           },
+           { 
+              "lat":40.7235672,
+              "lng":-73.9910961
+           },
+           { 
+              "lat":40.7234046,
+              "lng":-73.9904953
+           },
+           { 
+              "lat":40.7231769,
+              "lng":-73.9896369
+           },
+           { 
+              "lat":40.7228516,
+              "lng":-73.9889182
+           },
+           { 
+              "lat":40.7216156,
+              "lng":-73.9893688
+           },
+           { 
+              "lat":40.7190827,
+              "lng":-73.9906776
+           }
+        ];
+        var boweryBorderOutline = new google.maps.Polygon({
+            paths: boweryCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        boweryBorderOutline.setMap(map);  
 }
 
 
