@@ -493,8 +493,79 @@ function showBorders(){
         });
         sohoBorderOutline.setMap(map);   
     
-     
-    
+    var nolitaCoords = [ 
+           { 
+              "lat":40.7208596,
+              "lng":-73.9976299
+           },
+           { 
+              "lat":40.7214613,
+              "lng":-73.9973778
+           },
+           { 
+              "lat":40.721893,
+              "lng":-73.9972422
+           },
+           { 
+              "lat":40.7223273,
+              "lng":-73.9971042
+           },
+           { 
+              "lat":40.7229665,
+              "lng":-73.9968531
+           },
+           { 
+              "lat":40.7234372,
+              "lng":-73.9966482
+           },
+           { 
+              "lat":40.7250228,
+              "lng":-73.9953607
+           },
+           { 
+              "lat":40.7248946,
+              "lng":-73.9949638
+           },
+           { 
+              "lat":40.7246324,
+              "lng":-73.9942074
+           },
+           { 
+              "lat":40.7241081,
+              "lng":-73.9927268
+           },
+           { 
+              "lat":40.721624,
+              "lng":-73.9935744
+           },
+           { 
+              "lat":40.7203717,
+              "lng":-73.9940626
+           },
+           { 
+              "lat":40.7198148,
+              "lng":-73.9942395
+           },
+           { 
+              "lat":40.7195057,
+              "lng":-73.9943683
+           },
+           { 
+              "lat":40.719831,
+              "lng":-73.9952427
+           },
+           { 
+              "lat":40.7204856,
+              "lng":-73.9968359
+           }
+        ];
+        var nolitaBorderOutline = new google.maps.Polygon({
+            paths: nolitaCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        nolitaBorderOutline.setMap(map);   
 }
 
 
