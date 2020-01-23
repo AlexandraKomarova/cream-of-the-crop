@@ -57,7 +57,7 @@ function showBorders(){
                 //parameters for the markers
                 var request = {
                     location: event.latLng,
-                    radius: "700",
+                    radius: "300",
                     type: ["tourist_attraction"]
                 };
                 service = new google.maps.places.PlacesService(map);
