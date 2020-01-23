@@ -2,8 +2,10 @@ function showBorders(){
     var addListenersOnPolygon = function(polygon) {
         google.maps.event.addListener(polygon, 'click', function (event) {
         console.log("clicked")
+        // console.log("lat", location.latLng.lat())
+        console.log(event)
                 var request = {
-                    location: {lat:40.715033,lng:-73.984272},
+                    location: event.latLng,
                     radius: "3000",
                     type: ["tourist_attraction"]
                 };
@@ -16,7 +18,7 @@ function showBorders(){
                     var topSorted = results.slice(0, 4) 
                     for (var i = 0; i < topSorted.length; i++) {
                         var place = topSorted[i];
-            
+
                         let content = `<h3>${place.name}</h3>
                         <h4>${place.vicinity}</h4>
             
