@@ -566,6 +566,56 @@ function showBorders(){
             fillColor: 'transparent',
         });
         nolitaBorderOutline.setMap(map);   
+
+    var littleItalyCoords = [ 
+           { 
+              "lat":40.7179891,
+              "lng":-73.9999902
+           },
+           { 
+              "lat":40.7208351,
+              "lng":-73.9976514
+           },
+           { 
+              "lat":40.7201724,
+              "lng":-73.9960206
+           },
+           { 
+              "lat":40.7198105,
+              "lng":-73.9953125
+           },
+           { 
+              "lat":40.7193716,
+              "lng":-73.9944113
+           },
+           { 
+              "lat":40.7183958,
+              "lng":-73.9949048
+           },
+           { 
+              "lat":40.7172411,
+              "lng":-73.9954627
+           },
+           { 
+              "lat":40.7162165,
+              "lng":-73.9961064
+           },
+           { 
+              "lat":40.7170702,
+              "lng":-73.9986598
+           },
+           { 
+              "lat":40.7175662,
+              "lng":-73.9993574
+           }
+        ];
+        var littleItalyBorderOutline = new google.maps.Polygon({
+            paths: littleItalyCoords,
+            strokeColor: 'black',
+            strokeWeight: 2,
+            fillColor: 'transparent',
+        });
+        littleItalyBorderOutline.setMap(map);  
 }
 
 
