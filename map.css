@@ -1,32 +1,3 @@
-/* .modal {
-position: absolute;
-top: 0 !important;
-height: 100vh;
-max-height: 98vh;
-background-color: #fafafa;
-padding: 0;
-width: 30%;
-will-change: top, opacity;
-margin: 1vh !important;
-border-top-left-radius: 25px;
-border-top-Right-radius: 25px;
-border-bottom-left-radius: 25px;
-border-bottom-Right-radius: 25px;
-
-} */
-
-/* @media only screen and (max-width: 960px) {
-  .modal {
-    background-color: white;
-    margin: 1% !important;
-    top: 75vh !important;
-    height: 23vh;
-    max-height: 98vh;
-    width: 98%;
-        
-  }
-} */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -41,123 +12,101 @@ h3 {
 .page {
   height: 95%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 2%;
+  grid-template-rows: 0.05fr minmax(400px, 1fr);
+  grid-template-columns: 1fr;
+  margin: 4%;
+  grid-gap: 2%;
 }
 
 #map {
-  height: 95%;
+  height: 100%;
   width: 100%;
   border-radius: 20px;
   border: 2px solid black;
-  justify-self: end;
-  margin-right: 2%;
+  justify-self: center;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
 }
 
 
 .modal-space {
   margin: 0 auto;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+h3 {
+  margin: 10% auto;
 }
 
 .modal {
   position: relative;
-  width: 100%;
+  width: 90%;
+  max-height: 95vh;
+  border-radius: 20px;
+  border: 2px solid black;
 }
 
-.modal-trigger {
+#crown {
+  width: 7%;
+  display: block;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 678px){
+  h3 {
+    font-size: 20px;
+  }
   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* header {
+  .page {
+    height: 95%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: 2%;
+  }
+  
+  #map {
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    background: blue;
-
-} */
-/* #logo {
-  text-align: center;
-  padding: 35px;
+    border-radius: 20px;
+    border: 2px solid black;
+    justify-self: end;
+    margin-right: 2%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
   
-} */
-
-/* #wrapper {
-width: 100%;
-max-width: 100%;
-} */
-/* .container {
-  width: 100%;
-  height: 100%;
-  background: #000;
-} */
-
-
-/* #map {
   
-  right: 0;
-  height: 100vh;
-  width: 100%;
+  .modal-space {
+    margin: 0 auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
   
-} */
-
-/* #trigger {
-position: fixed;
-bottom: 0;
-
-} */
-
-/* #content {
-  border-radius:8px;
-  background:#fff;
-  padding:20px;
-} */
-
-
-
-/* #footer {
+  h3 {
+    margin: 60% auto;
+  }
+  
+  .modal {
     position: relative;
-    bottom: 0;
+    width: 90%;
+    height: 95vh;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+  
+  .modal:focus {
+    outline: none;
+  }
+}
 
-    background: green;
-    width: 100%;
-    height: 50px;
 
 
-} */
