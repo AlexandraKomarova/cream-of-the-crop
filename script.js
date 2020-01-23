@@ -2,7 +2,7 @@ var map, user, infoWindow;
 
 // append the key script
 
-$("body").append(`<script src="https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap&libraries=places"
+$("body").append(`<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlv3noHR2WJKDfrFOsnEH0SEtGrYO230&callback=initMap&libraries=places"
 async defer></script>`)
 
 var map, user, errorWindow;
