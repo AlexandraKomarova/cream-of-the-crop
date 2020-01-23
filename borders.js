@@ -5,7 +5,7 @@ function showBorders(){
                 var request = {
                     location: {lat:40.715033,lng:-73.984272},
                     radius: "3000",
-                    type: ["restaurant"]
+                    type: ["tourist_attraction"]
                 };
                 service = new google.maps.places.PlacesService(map);
                 service.nearbySearch(request, callback);
